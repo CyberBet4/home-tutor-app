@@ -1,18 +1,96 @@
 body {
-    background-color: black;
+    overflow-x: hidden;
+    height: 100vh;
     *{
         margin: 0px;
         font-family: 'DM Sans', sans-serif;
         padding: 0px;
     }
-    :root{
-        // COLOR DECLARATIONS
-        $primary-color: #9747FF;
-        $secondary-color: #FF8181;
-        $success-color: #7DC579;
-        $alternate-color: #6360FF;
 
-        // HEADING DECLARATION
-        
+    // COLOR DECLARATIONS
+    $primary-color: #9747FF;
+    $primary-color-alt: #6931B2;
+    $secondary-color: #FF8181;
+    $secondary-color-alt: #C06060;
+    $success-color: #7DC579;
+    $alternate-color: #6360FF;
+    $dark-color : #161719;
+    $less-dark-color : #212325;
+    $gray : #58595C;
+
+    background-color: $primary-color;
+
+    // HEADING DECLARATION
+    .base-text{
+        font-size: 14px;
+    }
+
+    .large-text{
+        font-size: 16px;
+        font-weight: 100 !important;
+    }
+
+    .big-display{
+        font-size: 24px;
+    }
+
+    .big-display-alt{
+        font-size: 24px;
+        font-family: 'Elsie', cursive;
+        text-transform: uppercase;
+    }
+
+    .primary-bg {
+        background-color: $primary-color !important;
+    }
+
+    .mt-10{
+        margin-top: 10rem !important;
+    }
+
+    .bottom-sheet{
+        background-color: $dark-color;
+        width: 100%;
+        padding: 3rem 2rem !important;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        position: fixed;
+        bottom: 0px;
+    }
+
+    .form-control {
+        border: 1px solid $gray;
+        color: #fff !important;
+        background-color: $dark-color;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .form-control:focus{
+        background-color: $dark-color;
+    }
+
+    .btn-primary {
+        background-color: $primary-color;
+        padding: 10px 20px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+    }
+
+    .btn-primary:focus, .btn-primary:hover{
+        background-color: $primary-color-alt;
+    }
+
+    .btn-secondary {
+        background-color: $secondary-color;
+        padding: 10px 20px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+    }
+
+    .btn-secondary:focus, .btn-secondary:hover{
+        background-color: $secondary-color-alt;
     }
 }

@@ -1,14 +1,10 @@
-import logo from './img/Logo.svg';
-import './App.css';
+import { Router, Route } from 'react-router'
+import Login from './Screens/Login'
 
 function App() {
   return (
     <div className="App">
-      <button className="btn btn-primary">
-        Hello World
-      </button>
-
-      <img src={logo} />
+      <Login />
     </div>
   );
 }
