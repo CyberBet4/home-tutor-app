@@ -1,0 +1,10 @@
+body {
+  background-color: black;
+}
+body * {
+  margin: 0px;
+  font-family: "DM Sans", sans-serif;
+  padding: 0px;
+}
+
+/*# sourceMappingURL=style.css.map */
