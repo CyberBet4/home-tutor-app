@@ -1,7 +1,5 @@
 body {
   overflow-x: hidden;
-  height: 100vh;
-  background-color: #9747FF;
 }
 body * {
   margin: 0px;
@@ -10,6 +8,7 @@ body * {
 }
 body .base-text {
   font-size: 14px;
+  color: #fff;
 }
 body .large-text {
   font-size: 16px;
@@ -29,6 +28,9 @@ body .primary-bg {
 body .mt-10 {
   margin-top: 10rem !important;
 }
+body .mt-7 {
+  margin-top: 7rem !important;
+}
 body .bottom-sheet {
   background-color: #161719;
   width: 100%;
@@ -47,6 +49,8 @@ body .form-control {
 }
 body .form-control:focus {
   background-color: #161719;
+  box-shadow: none;
+  border-color: #58595C;
 }
 body .btn-primary {
   background-color: #9747FF;
@@ -67,6 +71,31 @@ body .btn-secondary {
 }
 body .btn-secondary:focus, body .btn-secondary:hover {
   background-color: #C06060;
+}
+body .link {
+  color: #6360FF;
+  text-decoration: none;
+}
+body .link:hover {
+  text-decoration: underline;
+}
+body .input-group .input-group-text {
+  background-color: transparent;
+  border: 1px solid #58595C;
+  border-right: 0px;
+  padding-left: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+body .input-group .form-control {
+  border-left: 0px;
+}
+body .gray-color {
+  color: #58595C !important;
+}
+body .main {
+  height: 100vh;
+  background-color: #9747FF;
 }
 
 /*# sourceMappingURL=style.css.map */

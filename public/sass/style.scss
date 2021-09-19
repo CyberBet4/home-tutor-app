@@ -1,6 +1,6 @@
 body {
     overflow-x: hidden;
-    height: 100vh;
+    // height: 100vh;
     *{
         margin: 0px;
         font-family: 'DM Sans', sans-serif;
@@ -18,11 +18,12 @@ body {
     $less-dark-color : #212325;
     $gray : #58595C;
 
-    background-color: $primary-color;
+    
 
     // HEADING DECLARATION
     .base-text{
         font-size: 14px;
+        color: #fff;
     }
 
     .large-text{
@@ -48,6 +49,10 @@ body {
         margin-top: 10rem !important;
     }
 
+    .mt-7{
+        margin-top: 7rem !important;
+    }
+
     .bottom-sheet{
         background-color: $dark-color;
         width: 100%;
@@ -68,7 +73,11 @@ body {
 
     .form-control:focus{
         background-color: $dark-color;
+        box-shadow: none;
+        border-color: $gray;
     }
+
+    // BUTTON STYLES
 
     .btn-primary {
         background-color: $primary-color;
@@ -92,5 +101,39 @@ body {
 
     .btn-secondary:focus, .btn-secondary:hover{
         background-color: $secondary-color-alt;
+    }
+
+    // LINK STYLES
+    .link{
+        color: $alternate-color;
+        text-decoration: none;
+    }
+
+    .link:hover{
+        text-decoration: underline;
+    }
+
+    .input-group{
+        .input-group-text{
+            background-color: transparent;
+            border: 1px solid $gray;
+            border-right: 0px;
+            padding-left: 20px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .form-control{
+            border-left: 0px;
+        }
+    }
+
+    .gray-color{
+        color: $gray !important;
+    }
+
+    .main {
+        height: 100vh;
+        background-color: $primary-color;
     }
 }
