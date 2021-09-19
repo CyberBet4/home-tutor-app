@@ -27,13 +27,22 @@ const Signup = () => {
                             <input type="email" placeholder="Email" className="form-control" />
                         </div>
                         
+                        <div className="input-group mb-3">
+                            <span className="input-group-text">
+                                <FontAwesomeIcon className="gray-color" icon={faLock} />
+                            </span>
+                            <input type="password" placeholder="Password" className="form-control" />
+                        </div>
+
+                        <div className="input-group mb-3">
+                            <span className="input-group-text">
+                                <FontAwesomeIcon className="gray-color" icon={faLock} />
+                            </span>
+                            <input type="password" placeholder="Confirm Password" className="form-control" />
+                        </div>
                         
                         <button type="submit" className="w-100 mt-3 btn btn-primary">
-                            Sign In
-                        </button>
-
-                        <button type="submit" className="w-100 mt-3 btn btn-secondary">
-                            Sign in with Google 
+                            Create Account
                         </button>
 
                     </form>
