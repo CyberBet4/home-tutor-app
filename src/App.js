@@ -3,23 +3,23 @@ import Login from './Screens/Login'
 import Signup from './Screens/Signup'
 import Home from './Screens/Home'
 import React from 'react'
-import AccessProfileDetails from './components/AccessProfileDetails'
+import Auth from './Auth'
 
 
 function App() {
   return (
     <Router>
+      
       <div className="container-fluid p-0">
         <Switch>
-          <Route exact path="/" component={Login} />
-          <Route path="/signup" component={Signup} />
-
-          <AccessProfileDetails>
+          <Auth>
+            <Route exact path="/" component={Login} />
+            <Route path="/signup" component={Signup} />
             <Route path="/home" component={Home} />
-          </AccessProfileDetails>
-          
+          </Auth>
         </Switch>
       </div>
+      
     </Router>
   );
 }

@@ -1,5 +1,6 @@
 import logo from '.././img/Logo-white.svg';
 import 'animate.css'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';

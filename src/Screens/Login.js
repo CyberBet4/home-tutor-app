@@ -39,9 +39,11 @@ const Login = () => {
                             <input type="password" name="" placeholder="Password" id="" className="form-control" />
                             </div>
                             
-                            <button type="submit" className="w-100 mt-3 btn btn-primary">
-                                Sign In
-                            </button>
+                            {/* <button type="submit" className="w-100 mt-3 btn btn-primary"> */}
+                            <Link className="w-100 mt-3 btn btn-primary" to="/home">Sign In</Link>
+                                {/* Sign In */}
+
+                            {/* </button> */}
 
                             <button type="submit" className="w-100 mt-3 btn btn-secondary">
                                 Sign in with Google 

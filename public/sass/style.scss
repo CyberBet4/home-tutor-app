@@ -6,8 +6,10 @@ $secondary-color-alt: #C06060;
 $success-color: #7DC579;
 $alternate-color: #6360FF;
 $dark-color : #161719;
+$dark-mode-color : #292B2D;
 $less-dark-color : #212325;
 $gray : #58595C;
+$text-light-color : #FCFCFF;
 
 body {
     overflow-x: hidden;
@@ -21,12 +23,20 @@ body {
 
     
 
-    background-color: $primary-color;
+    // background-color: $primary-color;
 
     // HEADING DECLARATION
+
+    .base-text-small {
+        font-size: 10px;
+    }
     .base-text{
         font-size: 14px;
         color: #fff;
+    }
+
+    .base-text-semi-small {
+        font-size: 12px;
     }
 
     .large-text{
@@ -80,7 +90,42 @@ body {
         border-color: $gray;
     }
 
+    //SPACING [PADDING & MARGIN] 8PT GRID
+
+    .pb-3 {
+        padding-bottom: 24px !important;
+    }
+    .mr-3 {
+        margin-right: 24px !important;
+    }
+
+    .mr-2{
+        margin-right: 16px !important;
+    }
+
+    .mr-1 {
+        margin-right: 8px !important;
+    }
+
     // BUTTON STYLES
+
+    .icon-box{
+        background-color: $gray;
+        border-radius: 10px;
+        padding: 8px;
+        width: max-content;
+    }
+
+    .btn-pressable{
+        color: $text-light-color;
+        border-radius: 50px;
+        transition: 200ms ease-in all;
+    }
+
+    .btn-pressable:hover, 
+    .btn-pressable:active {
+        background-color: $gray;
+    }
 
     .btn-primary {
         background-color: $primary-color;
@@ -135,8 +180,74 @@ body {
         color: $gray !important;
     }
 
+    // IMAGE
+    .img-rounded{
+        max-height: 60px;
+        max-width: auto;
+        border-radius: 200px;
+    }
+
+    .img-course-sm {
+        max-height: 60px;
+    }
+
     .main {
         height: 100vh;
         background-color: $primary-color;
+        display: flex;
+        z-index: -1005;
+        padding: 16px;
+        flex-direction: column;
+    }
+
+    .darkmode{
+        background-color: $dark-mode-color;
+        color: $text-light-color;
+    }
+
+    
+    .darkmode .card {
+        background-color: $less-dark-color;
+        border: none;
+        border-radius: 10px;
+        z-index: 2000;
+    }
+
+    .space-between {
+        justify-content: space-between;
+    }
+
+    // progress bar
+    .progress,
+    .progress-bar{
+        border-radius: 25px;
+    }
+    
+    .progress-bar{
+        background-color: $success-color;
+    }
+
+    // text color
+    .text-gray {
+        color: $gray;
+    }
+
+    // Bottom bar
+    .bottom-bar{
+        height: 10%;
+        background-color: $less-dark-color;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+    }
+    .btn.b-tab.active{
+        color: $secondary-color;
+    }
+    .btn.b-tab{
+        color: $text-light-color;
+    }
+
+    // animate css tweak
+    .animate__fadeIn {
+        z-index: 2000;
     }
 }
