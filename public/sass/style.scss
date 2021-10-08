@@ -21,7 +21,7 @@ body {
         padding: 0px;
     }
 
-    
+}
 
     // background-color: $primary-color;
 
@@ -239,15 +239,25 @@ body {
         border-top-right-radius: 25px;
         border-top-left-radius: 25px;
     }
+
+    .btn.b-tab.active svg path,
     .btn.b-tab.active{
         color: $secondary-color;
+        fill: $secondary-color;
     }
     .btn.b-tab{
         color: $text-light-color;
+    }
+
+    .btn:focus{
+        box-shadow: none;
     }
 
     // animate css tweak
     .animate__fadeIn {
         z-index: 2000;
     }
-}
+
+
+// }
+

@@ -13,7 +13,7 @@ const Login = () => {
         <div className="main">
             <div className="row">
                 <div className="col-12">
-                    <div className="primary-bg mt-7 d-flex justify-content-center">
+                    <div className=" mt-7 d-flex justify-content-center">
                         <img src={logo} className="animate__animated animate__fadeIn" alt="Home Tutor Logo" />
                     </div>
 

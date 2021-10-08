@@ -1,10 +1,39 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
-const BottomBar = () => {
+const BottomBar = ({ currentTab }) => {
+
+    const HomeTab = useRef()
+    const SearchTab = useRef()
+    const CoursesTab = useRef()
+    const AccountTab = useRef()
+
+    console.log(currentTab);
+
+    let HomeTabClass = ""
+    let SearchTabClass = ""
+    let AccountTabClass = ""
+    let CoursesTabClass = ""
+    // const [status, setStatus] = useState('Not Home')
+
+    // Set current tab to active
+    currentTab === 'search' ? SearchTabClass = "search-tab active btn b-tab d-flex align-items-center" 
+    : SearchTabClass = "search-tab btn b-tab d-flex align-items-center"
+    
+    currentTab === 'home' ? HomeTabClass = "btn b-tab active home-tab d-flex align-items-center"
+    : HomeTabClass = "btn b-tab home-tab d-flex align-items-center"
+    
+    currentTab === 'courses' ? CoursesTabClass = "courses-tab active btn b-tab d-flex align-items-center"
+    : CoursesTabClass = "courses-tab btn b-tab d-flex align-items-center"
+    
+    currentTab === 'account' ? AccountTabClass = "account-tab active btn b-tab d-flex align-items-center"
+    : AccountTabClass = "account-tab btn b-tab d-flex align-items-center"
+
+
     return (
         <div className="fixed-bottom bottom-bar p-1 pb-3">
             <div className="d-flex p-2 align-items-center" style={{justifyContent : 'space-between'}}>
-                <button className="btn b-tab home-tab d-flex align-items-center" style={{flexDirection: 'column'}}>
+                <Link to="/home" ref={HomeTab} className={HomeTabClass} id="home-tab" style={{flexDirection: 'column'}}>
                     {/* svg goes here */}
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4373 1.10984C10.7683 0.852383 11.2318 0.852383 11.5628 1.10984L19.8128 7.52651C20.0361 7.70018 20.1667 7.96721 20.1667 8.25008V18.3334C20.1667 19.0628 19.877 19.7622 19.3613 20.278C18.8455 20.7937 18.1461 21.0834 17.4167 21.0834H4.58337C3.85403 21.0834 3.15456 20.7937 2.63883 20.278C2.12311 19.7622 1.83337 19.0628 1.83337 18.3334V8.25008C1.83337 7.96721 1.96397 7.70018 2.18726 7.52651L10.4373 1.10984ZM3.66671 8.69841V18.3334C3.66671 18.5765 3.76328 18.8097 3.93519 18.9816C4.1071 19.1535 4.34026 19.2501 4.58337 19.2501H17.4167C17.6598 19.2501 17.893 19.1535 18.0649 18.9816C18.2368 18.8097 18.3334 18.5765 18.3334 18.3334V8.69841L11 2.9947L3.66671 8.69841Z" fill="#FCFCFF"/>
@@ -15,9 +44,9 @@ const BottomBar = () => {
                     <p className="base-text-small mt-1">
                         Home
                     </p>
-                </button>
+                </Link>
 
-                <button className="search-tab btn b-tab d-flex align-items-center" style={{flexDirection: 'column'}}>
+                <Link to="/home/search" ref={SearchTab} className={SearchTabClass} style={{flexDirection: 'column'}}>
                     {/* svg goes here */}
                     <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5834 3.66659C7.03955 3.66659 4.16671 6.53942 4.16671 10.0833C4.16671 13.6271 7.03955 16.4999 10.5834 16.4999C14.1272 16.4999 17 13.6271 17 10.0833C17 6.53942 14.1272 3.66659 10.5834 3.66659ZM2.33337 10.0833C2.33337 5.5269 6.02702 1.83325 10.5834 1.83325C15.1397 1.83325 18.8334 5.5269 18.8334 10.0833C18.8334 14.6396 15.1397 18.3333 10.5834 18.3333C6.02702 18.3333 2.33337 14.6396 2.33337 10.0833Z" fill="#FCFCFF"/>
@@ -28,9 +57,9 @@ const BottomBar = () => {
                     <p className="base-text-small mt-1">
                         Search
                     </p>
-                </button>
+                </Link>
 
-                <button className="courses-tab btn b-tab d-flex align-items-center" style={{flexDirection: 'column'}}>
+                <Link to="/home/courses" ref={CoursesTab} className={CoursesTabClass} style={{flexDirection: 'column'}}>
                     {/* svg goes here */}
                     <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 2.75008C6.94361 2.75008 3.24996 6.44373 3.24996 11.0001C3.24996 15.5564 6.94361 19.2501 11.5 19.2501C16.0563 19.2501 19.75 15.5564 19.75 11.0001C19.75 6.44373 16.0563 2.75008 11.5 2.75008ZM1.41663 11.0001C1.41663 5.43121 5.93109 0.916748 11.5 0.916748C17.0688 0.916748 21.5833 5.43121 21.5833 11.0001C21.5833 16.569 17.0688 21.0834 11.5 21.0834C5.93109 21.0834 1.41663 16.569 1.41663 11.0001Z" fill="#FCFCFF"/>
@@ -41,9 +70,9 @@ const BottomBar = () => {
                     <p className="base-text-small mt-1">
                         Courses
                     </p>
-                </button>
+                </Link>
 
-                <button className="account-tab btn b-tab d-flex align-items-center" style={{flexDirection: 'column'}}>
+                <Link to="/home/account" ref={AccountTab} className={AccountTabClass} style={{flexDirection: 'column'}}>
                     {/* svg goes here */}
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4.09243 14.1757C4.95197 13.3161 6.11776 12.8333 7.33333 12.8333H14.6667C15.8822 12.8333 17.048 13.3161 17.9076 14.1757C18.7671 15.0352 19.25 16.201 19.25 17.4166V19.2499C19.25 19.7562 18.8396 20.1666 18.3333 20.1666C17.8271 20.1666 17.4167 19.7562 17.4167 19.2499V17.4166C17.4167 16.6872 17.1269 15.9878 16.6112 15.472C16.0955 14.9563 15.396 14.6666 14.6667 14.6666H7.33333C6.60399 14.6666 5.90452 14.9563 5.38879 15.472C4.87306 15.9878 4.58333 16.6872 4.58333 17.4166V19.2499C4.58333 19.7562 4.17293 20.1666 3.66667 20.1666C3.16041 20.1666 2.75 19.7562 2.75 19.2499V17.4166C2.75 16.201 3.23289 15.0352 4.09243 14.1757Z" fill="#FCFCFF"/>
@@ -53,9 +82,9 @@ const BottomBar = () => {
 
                     {/* label goes here */}
                     <p className="base-text-small mt-1">
-                        Courses
+                        Account
                     </p>
-                </button>
+                </Link>
             </div>
         </div>
     )
