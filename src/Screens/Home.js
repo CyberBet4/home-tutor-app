@@ -30,7 +30,7 @@ const Home = () => {
                 </Route>
 
                 <Route path="/home/courses">
-                    <TopNavLevel title={"Course"} iconType={shoppingbag} />
+                    <TopNavLevel title={"My Courses"} iconType={shoppingbag} />
                     <Courses />
                     <BottomBar currentTab={'courses'} />
                 </Route>

@@ -2,11 +2,25 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faCircle, faCircleNotch, faDotCircle, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
-const CourseList = () => {
+const CourseList = ({ mirror }) => {
+
+    let MirrorCard = {}
+    
+    if(mirror === true ) {
+        MirrorCard = {
+            flexDirection : 'row-reverse'
+        }
+    }else {
+        MirrorCard = {
+            flexDirection : 'row'
+        }
+    }
+
     return (
         <div className="d-flex justify-content-center">
             <div style={{minWidth : 325}}  className="card mb-3 darkmode p-4 animate__animated animate__fadeInUp animate__fast">
-                <div className="d-flex space-between">
+                <div className="d-flex space-between" style={MirrorCard}>
+                    
                     {/* TITLE & PRICE */}
                     <div style={{maxWidth : 200}}>
                         <h5 className="mb-2 base-text-semi-small">
@@ -15,6 +29,7 @@ const CourseList = () => {
                         <p className="base-text-semi-small mb-2">
                             $290.00
                         </p>
+                        
                         {/* rating */}
                         <div className="d-flex align-items-center">
                             <FontAwesomeIcon className="base-text-semi-small mr-1" style={{color : 'yellow'}} icon={faStar} />
