@@ -1,0 +1,76 @@
+
+This project is structured into folders
+
+/Components
+/Components/Navigations
+/Layouts
+/Screens
+
+::::::::::::::::::::::::::::::::::::::
+Reusable Components ::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::
+
+
+
+
+
+'''''''''''CourseList'''''''''''''''''
+
+WHERE THE HECK IS IT?
+
+/src/components/CourseList.js
+
+HOW TO USE IT?
+
+You can call this component by
+using <CourseList />
+
+WHAT DOES IT DO?
+It displays the course card. Each card has: 
+
+1) A Price
+2) Course image
+3) Rating
+4) Author
+5) Level
+
+WHAT ABOUT THE PROPS?
+It takes a single prop called "mirror" which 
+allows only a boolean value i.e. true or false
+
+e.g. <CourseList mirror={true} />
+
+This prop mirrors the course card, meaning
+the image goes to the left when mirror is true.
+
+
+
+
+
+
+'''''''''''TopNavLevel'''''''''''''''''
+
+WHERE THE HECK IS IT?
+
+/src/components/Navigations/TopNavLevel.js
+
+
+HOW TO USE IT?
+You can call this component by
+using <TopNavLevel />
+
+
+WHAT DOES IT DO?
+It displays the navigation header that shows 
+on almost all top level Screens.
+It contains:
+
+1) Title
+2) Icon
+
+WHAT ABOUT THE PROPS?
+It takes a two prop called "title" & "iconType".
+"title" takes a string
+"iconType" takes an object (font awesome object)
+
+e.g. <TopNavLevel title={true} iconType={faShoppingBag} />

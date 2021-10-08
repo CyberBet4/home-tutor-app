@@ -4,8 +4,16 @@ import OngoingCourseList from '../../components/OngoingCourseList'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import CourseList from '../../components/CourseList';
+import { useUserDetails } from '../../Auth';
 
 const HomeScreen = () => {
+    let ProfilePic = useUserDetails().profilePic
+    let setProfilePicture = {
+        backgroundImage : `url('${ProfilePic}')`,
+        backgroundSize : 'cover',
+        backgroundPosition : 'center',
+        backgroundRepeat: 'no-repeat'
+    }
     return (
         <div>
             {/* HEADER WITH PROFILE & GREETING */}
@@ -13,7 +21,8 @@ const HomeScreen = () => {
                     <div className="d-flex mb-3 align-items-center" style={{justifyContent : 'space-between'}}>
                         <div className="d-flex align-items-center animate__animated animate__fadeIn animate__faster">
                             {/* PROFILE IMAGE */}
-                            <img src="https://www.apptide.io/wp-content/uploads/2021/08/Ellipse-27.png" className="img-rounded mr-3 img-fluid" alt="" />
+                            <div className="img-rounded mr-3" style={setProfilePicture}></div>
+
                             <div>
                                 <p className="base-text-small">Welcome Back</p>
                                 <p className="base-text">Peter Ladipo</p>
