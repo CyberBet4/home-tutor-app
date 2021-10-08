@@ -33,8 +33,9 @@ const HomeScreen = () => {
                     {/* Recommendations */}
                     <div className="d-flex justify-content-center">
                         <div className="bottom-sheet fixed-bottom" style={{minHeight : '66%'}}>
-                        <h5 className="base-text mt-4 mb-4">Recommendations</h5>
-                        <CourseList  />
+                            <h5 className="base-text mt-4 mb-4">Recommendations</h5>
+                            <CourseList  />
+                            <CourseList  />
                         </div>
                     </div>
         </div>

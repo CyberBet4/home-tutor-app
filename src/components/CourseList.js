@@ -1,10 +1,11 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faCircle, faCircleNotch, faDotCircle, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+
 const CourseList = () => {
     return (
         <div className="d-flex justify-content-center">
-            <div style={{minWidth : 325}}  className="card darkmode p-4 animate__animated animate__fadeInUp animate__fast">
+            <div style={{minWidth : 325}}  className="card mb-3 darkmode p-4 animate__animated animate__fadeInUp animate__fast">
                 <div className="d-flex space-between">
                     {/* TITLE & PRICE */}
                     <div style={{maxWidth : 200}}>
@@ -26,7 +27,7 @@ const CourseList = () => {
                     </div>
 
                     {/* COURSE ICON OR IMAGE */}
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/shape-1851248-1569120.png" alt="" className="img-course-sm img-fluid" />
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/shape-1851248-1569120.png" alt="" className="img-course img-fluid" />
                 </div>
             </div>
         </div>

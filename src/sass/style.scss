@@ -161,6 +161,18 @@ body {
         text-decoration: underline;
     }
 
+    button.btn-link,
+    a.btn-link {
+        text-decoration: none;
+        color: $gray;
+        font-weight: 500;
+    }
+
+    button.btn-link.active,
+    a.btn-link.active{
+        color: $text-light-color;
+    }
+
     .input-group{
         .input-group-text{
             background-color: transparent;
@@ -189,6 +201,10 @@ body {
 
     .img-course-sm {
         max-height: 60px;
+    }
+
+    .img-course {
+        max-height: 80px;
     }
 
     .main {
@@ -258,6 +274,27 @@ body {
         z-index: 2000;
     }
 
+
+    //badges
+    a.badges{
+        color: $text-light-color;
+        text-decoration: none;
+    }
+
+    a.badges:hover,
+    a.badges:active{
+        background-color: $primary-color-alt;
+    }
+
+    .badges {
+        padding: 10px 15px;
+        background-color: $alternate-color;
+        border-radius: 25px;
+    }
+
+    .badges p {
+        margin-bottom: 0px;
+    }
 
 // }
 

@@ -1,4 +1,5 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import '../src/css/style.css'
 import Login from './Screens/Login'
 import Signup from './Screens/Signup'
 import Home from './Screens/Home'

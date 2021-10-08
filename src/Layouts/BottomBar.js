@@ -1,24 +1,25 @@
 import React, { useRef, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
 
 const BottomBar = ({ currentTab }) => {
 
     const HomeTab = useRef()
-    const SearchTab = useRef()
+    const ExploreTab = useRef()
     const CoursesTab = useRef()
     const AccountTab = useRef()
 
     console.log(currentTab);
 
     let HomeTabClass = ""
-    let SearchTabClass = ""
+    let ExploreTabClass = ""
     let AccountTabClass = ""
     let CoursesTabClass = ""
     // const [status, setStatus] = useState('Not Home')
 
     // Set current tab to active
-    currentTab === 'search' ? SearchTabClass = "search-tab active btn b-tab d-flex align-items-center" 
-    : SearchTabClass = "search-tab btn b-tab d-flex align-items-center"
+    currentTab === 'explore' ? ExploreTabClass = "Explore-tab active btn b-tab d-flex align-items-center" 
+    : ExploreTabClass = "Explore-tab btn b-tab d-flex align-items-center"
     
     currentTab === 'home' ? HomeTabClass = "btn b-tab active home-tab d-flex align-items-center"
     : HomeTabClass = "btn b-tab home-tab d-flex align-items-center"
@@ -46,7 +47,7 @@ const BottomBar = ({ currentTab }) => {
                     </p>
                 </Link>
 
-                <Link to="/home/search" ref={SearchTab} className={SearchTabClass} style={{flexDirection: 'column'}}>
+                <Link to="/home/explore" ref={ExploreTab} className={ExploreTabClass} style={{flexDirection: 'column'}}>
                     {/* svg goes here */}
                     <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5834 3.66659C7.03955 3.66659 4.16671 6.53942 4.16671 10.0833C4.16671 13.6271 7.03955 16.4999 10.5834 16.4999C14.1272 16.4999 17 13.6271 17 10.0833C17 6.53942 14.1272 3.66659 10.5834 3.66659ZM2.33337 10.0833C2.33337 5.5269 6.02702 1.83325 10.5834 1.83325C15.1397 1.83325 18.8334 5.5269 18.8334 10.0833C18.8334 14.6396 15.1397 18.3333 10.5834 18.3333C6.02702 18.3333 2.33337 14.6396 2.33337 10.0833Z" fill="#FCFCFF"/>
@@ -55,7 +56,7 @@ const BottomBar = ({ currentTab }) => {
 
                     {/* label goes here */}
                     <p className="base-text-small mt-1">
-                        Search
+                        Explore
                     </p>
                 </Link>
 
