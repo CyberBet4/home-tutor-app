@@ -43,6 +43,10 @@ a {
   background-color: #9747FF !important;
 }
 
+.mt-4 {
+  margin-top: 40px !important;
+}
+
 .mt-10 {
   margin-top: 10rem !important;
 }
@@ -54,7 +58,7 @@ a {
 .bottom-sheet {
   background-color: #161719;
   width: 100%;
-  padding: 3rem 2rem !important;
+  padding: 1rem 2rem !important;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   position: fixed;
