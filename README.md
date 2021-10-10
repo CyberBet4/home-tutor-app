@@ -12,3 +12,4 @@ Users have a personalized dashboard showing analytics of their learning curve an
 
 Users can see testimonials/feedbacks of course content.
 
+### This application is built using Mobile first approach
