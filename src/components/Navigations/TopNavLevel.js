@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-const TopNavLevel = ({iconType, title}) => {
+const TopNavLevel = ({iconType, title, pathlink}) => {
     console.log(iconType);
 
     return (
@@ -11,7 +11,7 @@ const TopNavLevel = ({iconType, title}) => {
             <div className="navigation_title d-flex align-items-center">
                 <p className="large-text">{title}</p>
             </div>
-            <Link className="btn btn-pressable">
+            <Link to={pathlink} className="btn btn-pressable">
                 <FontAwesomeIcon icon={iconType} />
             </Link>
         </div>

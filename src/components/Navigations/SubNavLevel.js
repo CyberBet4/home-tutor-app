@@ -4,14 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 
-const SubNavLevel = ({iconType}) => {
+const SubNavLevel = ({ iconType, title }) => {
+    
     return (
         <div className="d-flex space-between">
             <div className="navigation_title d-flex align-items-center">
                 <Link className="btn btn-pressable mr-1" >
                     <FontAwesomeIcon icon={faChevronLeft} />
                 </Link>
-                <p className="base-text">Explore</p>
+                <p className="base-text">{title}</p>
             </div>
             <Link className="btn btn-pressable">
                 <FontAwesomeIcon icon={iconType} />

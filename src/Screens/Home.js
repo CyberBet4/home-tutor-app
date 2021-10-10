@@ -6,9 +6,11 @@ import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import TopNavLevel from '../components/Navigations/TopNavLevel';
 import BottomBar from '../Layouts/BottomBar';
 import HomeScreen from './Home/HomeScreen'
+import Cart from './Checkout/Cart';
 import Explore from './Explore'
 import Courses from './Courses/Courses'
 import Account from './Account/Account'
+import SubNavLevel from '../components/Navigations/SubNavLevel';
 
 
 const Home = () => {
@@ -30,7 +32,7 @@ const Home = () => {
                 </Route>
 
                 <Route path="/home/courses">
-                    <TopNavLevel title={"My Courses"} iconType={shoppingbag} />
+                    <TopNavLevel title={"My Courses"} iconType={shoppingbag} pathlink={"/home/cart"} />
                     <Courses />
                     <BottomBar currentTab={'courses'} />
                 </Route>
@@ -38,6 +40,11 @@ const Home = () => {
                     <TopNavLevel title={"Account"} />
                     <Account />
                     <BottomBar currentTab={'account'} />
+                </Route>
+
+                <Route path="/home/cart" >
+                    <SubNavLevel title={"Cart"} />
+                    <Cart />
                 </Route>
             </Switch>
         </div>
