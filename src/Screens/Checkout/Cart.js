@@ -1,9 +1,10 @@
 import React from 'react'
+import CourseList from '../../components/CourseList'
 
 const Cart = () => {
     return (
         <div>
-            Cart
+            <CourseList closeBtn={true} />
         </div>
     )
 }

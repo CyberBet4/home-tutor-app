@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faCircle, faCircleNotch, faDotCircle, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
-const CourseList = ({ mirror }) => {
+const CourseList = ({ mirror, closeBtn }) => {
 
     let MirrorCard = {}
     
@@ -16,9 +16,37 @@ const CourseList = ({ mirror }) => {
         }
     }
 
+
+
+    const toggleCloseBtn = (status) => {
+        if (status === true){
+            console.log('true here...');
+            return (
+                <button className="closeBtn btn btn-link">
+                    x
+                </button>
+            )
+        }else {
+            console.log('false here');
+            return (
+                <>
+
+                </>
+            )
+        }
+        
+    }
+    // console.log(closeBtn);
+    // closeBtn === false ? toggleCloseBtn(false) : toggleCloseBtn(true)
+
+
     return (
         <div className="d-flex justify-content-center">
+            
             <div style={{minWidth : 325}}  className="card mb-3 darkmode p-4 animate__animated animate__fadeInUp animate__fast">
+                <div className="d-flex justify-content-end">
+                    {toggleCloseBtn(closeBtn)}
+                </div>
                 <div className="d-flex space-between" style={MirrorCard}>
                     
                     {/* TITLE & PRICE */}

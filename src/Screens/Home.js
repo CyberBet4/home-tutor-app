@@ -43,7 +43,7 @@ const Home = () => {
                 </Route>
 
                 <Route path="/home/cart" >
-                    <SubNavLevel title={"Cart"} />
+                    <SubNavLevel title={"Cart"} iconType={faShoppingBag} />
                     <Cart />
                 </Route>
             </Switch>
