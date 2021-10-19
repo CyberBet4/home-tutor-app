@@ -244,16 +244,26 @@ body {
         z-index: 2000;
     }
 
+    .favBtn,
     .closeBtn {
         position: absolute;
         z-index: 3000;
         margin-top: -30px;
         margin-right: -30px;
         background-color: var(--bs-gray);
-        padding: 1px 10px;
+        padding: 3px 10px;
         border-radius: 100px;
     }
 
+    button.favBtn.btn.btn-link {
+        position: absolute !important;
+        margin-top: 80px !important;
+        width: max-content !important;
+        background-color: #58595C !important;
+    }
+    
+
+    .favBtn:active,
     .closeBtn:active {
         color: black;
     }

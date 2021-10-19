@@ -1,9 +1,20 @@
-import React from 'react'
+import React  from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar, faCircle, faCircleNotch, faDotCircle, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faCircle, faTimes, faHeart } from '@fortawesome/free-solid-svg-icons'
 
-const CourseList = ({ mirror, closeBtn }) => {
+const CourseList = ({ mirror, closeBtn, favBtn }) => {
 
+    const closeBtnObj = {
+        id : 1,
+        opt : closeBtn
+    }
+
+    const favBtnObj = {
+        id : 2,
+        opt : favBtn
+    }
+
+    //MIRROR THE CARD
     let MirrorCard = {}
     
     if(mirror === true ) {
@@ -16,25 +27,71 @@ const CourseList = ({ mirror, closeBtn }) => {
         }
     }
 
+    
+    console.log(closeBtn);
 
+    const removeCard = () => {
+        console.log(this);
+    } 
 
-    const toggleCloseBtn = (status) => {
-        if (status === true){
-            console.log('true here...');
-            return (
-                <button className="closeBtn btn btn-link">
-                    x
+    const favoriteCard = () => {
+        console.log(this);
+    } 
+
+    //OPTION FOR REMOVE BUTTON
+    const toggleBtn = (status) => {
+        console.log(status);
+        switch (status.opt && status.id) {
+
+            // Close button
+            case (true && 1) : 
+                return(
+                    <button onClick={removeCard()} className="closeBtn btn btn-link">
+                        <FontAwesomeIcon icon={faTimes} color={'black'} />
+                    </button>
+                )
+
+            // Favorite button
+            case (true && 2) : 
+            return(
+                <button onClick={favoriteCard()} className="favBtn btn btn-link mt-3" style={{ 
+                    width : 'max-content', 
+                    // position: 'absolute',
+                    // bottom : -20,
+                    // marginTop: 80,
+                    backgroundColor : '#FF8181',
+                    borderRadius : 25
+                }}>
+                    <FontAwesomeIcon icon={faHeart} color={'black'} />
                 </button>
             )
-        }else {
-            console.log('false here');
-            return (
-                <>
-
-                </>
-            )
-        }
         
+            default:
+                console.log(status);
+                break;
+        }
+
+        // if (status.opt === true){
+        //     // console.log('true here...');
+        //     return (
+        //         <button onClick={removeCard()} className="closeBtn btn btn-link">
+        //             <FontAwesomeIcon icon={faTimes} color={'black'} />
+        //         </button>
+        //     )
+        // }else {
+        //     // console.log('false here');
+        //     return (
+        //         <>
+
+        //         </>
+        //     )
+        // }
+        
+    }
+
+    //OPTION FOR FAVORITE BUTTON
+    const toggleFavBtn = (status) => {
+
     }
     // console.log(closeBtn);
     // closeBtn === false ? toggleCloseBtn(false) : toggleCloseBtn(true)
@@ -45,7 +102,7 @@ const CourseList = ({ mirror, closeBtn }) => {
             
             <div style={{minWidth : 325}}  className="card mb-3 darkmode p-4 animate__animated animate__fadeInUp animate__fast">
                 <div className="d-flex justify-content-end">
-                    {toggleCloseBtn(closeBtn)}
+                    {toggleBtn(closeBtnObj)}
                 </div>
                 <div className="d-flex space-between" style={MirrorCard}>
                     
@@ -72,6 +129,7 @@ const CourseList = ({ mirror, closeBtn }) => {
                     {/* COURSE ICON OR IMAGE */}
                     <img src="https://cdn.iconscout.com/icon/free/png-256/shape-1851248-1569120.png" alt="" className="img-course img-fluid" />
                 </div>
+                {toggleBtn(favBtnObj)}
             </div>
         </div>
     )
